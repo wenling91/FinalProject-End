@@ -12,12 +12,12 @@ import SafariServices
 class AboutMeController: UITableViewController {
     
     var sectionContent = [
-        [ "https://www.apple.com/ios/app-store/", "http://www.appcoda.com/contact"],
-        [
-          "https://twitter.com/appcodamobile",
-          "https://facebook.com/appcodamobile",
-          "https://www.instagram.com/appcodadotcom"
-        ]
+        [ "https://www.jumpman.tw", "https://www.pixnet.net/tags/花蓮美食",
+          "https://haohui2017.com/lifestyle/hualien-10food/",
+          "https://yoti.life/hualien-food-menu/",
+          "https://kenalice.tw/blog/post/39856633"
+        ],
+        ["https://www.cwb.gov.tw/V8/C/W/week.html"]
      ]
 
 

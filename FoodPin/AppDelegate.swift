@@ -27,7 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        saveData()
+        let os = ProcessInfo().operatingSystemVersion
+        if os.majorVersion <= 12 {
+            saveData()  //call when OS version is then 13
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -41,11 +44,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        saveData()
+        let os = ProcessInfo().operatingSystemVersion
+        if os.majorVersion <= 12 {
+            saveData()  //call when OS version is then 13
+        }
     }
 
     // MARK: UISceneSession Lifecycle
-
     @available(iOS 13.0, *)
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
@@ -61,15 +66,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func saveData() {
-        //let tabBarController = window!.rootViewController as! UITabBarController
-        //let navigationController = tabBarController.viewControllers?[0] as! UINavigationController
-        
-        let navigationController = window!.rootViewController as! UINavigationController
-        let controller = navigationController.viewControllers[0] as! RestaurantTableViewController
-        //or navigationController.topViewController
-        controller.saveRestaurants()
-    }
+           let tabBarController = window!.rootViewController as! UITabBarController
+           let navigationController = tabBarController.viewControllers?[0] as! UINavigationController
+           //let navigationController = window!.rootViewController as! UINavigationController
+           let controller = navigationController.viewControllers[0] as! RestaurantTableViewController
+           //or navigationController.topViewController
+           controller.saveRestaurants()
+       }
 
-    
 }
-
