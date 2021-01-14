@@ -2,7 +2,7 @@
 //  maptestViewController.swift
 //  FoodPin
 //
-//  Created by 楊智崴 on 2020/12/25.
+//  Created by NDHU_CSIE on 2020/12/25.
 //  Copyright © 2020 NDHU_CSIE. All rights reserved.
 //
 
@@ -188,6 +188,19 @@ class maptestViewController: UIViewController, MKMapViewDelegate {
         }
         
         
+    }
+    
+    // MARK: - Choose Map Type
+    
+    @IBAction func selectMapType(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .satellite
+        default:
+            break
+        }
     }
     
     // MARK: - Navigation

@@ -33,13 +33,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "rsz_logo.jpg",
+      "filename" : "Hotel-1.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "rsz_1logo.jpg",
+      "filename" : "Hotel-2.png",
       "scale" : "3x"
     },
     {
@@ -75,25 +75,25 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "rsz_1rsz_1logo.jpg",
+      "filename" : "Hotel-3.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "rsz_2logo.jpg",
+      "filename" : "Hotel.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "rsz_3logo.jpg",
+      "filename" : "Hotel-4.png",
       "scale" : "2x"
     },
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "rsz_4logo.jpg",
+      "filename" : "Hotel copy.png",
       "scale" : "1x"
     }
   ],
